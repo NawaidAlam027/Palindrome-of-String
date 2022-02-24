@@ -1,0 +1,32 @@
+using System;
+
+namespace String_Palindrom
+{
+    class Program
+    {
+        static void Main (String[] arg)
+        {
+            string text;
+            Console.WriteLine("Enter String:");
+            text = Console.ReadLine();
+            int l;
+            int i;
+            l = text.Length;
+            
+            for ( i = 0; i < l / 2; i++)
+            {
+                if (text[i] != text[l - i - 1])
+                {
+                    Console.WriteLine("It is not Palindrom");
+                    break;
+                }
+            }
+            if(i==l/2)
+            {
+                Console.WriteLine("It is Palindrom");
+
+            }
+          Console.ReadLine();
+        } 
+    }
+}
